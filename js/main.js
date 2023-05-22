@@ -1,17 +1,15 @@
-import GameScene from './GameScene.js';
+import { GameScene } from './Game.js';
 
+// phaser game configuration
 const config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
-    scene: GameScene,
+    width: window.innerWidth,
+    height: window.innerHeight,
     physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 0 },
-            debug: false
-        }
-    }
+        default: 'arcade'
+    },
+    scene: [GameScene]
 };
 
+// new game instance
 const game = new Phaser.Game(config);
